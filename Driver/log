@@ -1,0 +1,30 @@
+Aug 06, 2018 8:00:41 PM org.mongodb.morphia.logging.MorphiaLoggerFactory chooseLoggerFactory
+INFO: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+13 [main] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+134 [cluster-ClusterId{value='5b68d319e7424d2562fb4980', description='null'}-127.0.0.1:27017] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:63}] to 127.0.0.1:27017
+138 [cluster-ClusterId{value='5b68d319e7424d2562fb4980', description='null'}-127.0.0.1:27017] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3030632}
+574 [main] INFO org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+581 [cluster-ClusterId{value='5b68d31ae7424d2562fb4981', description='null'}-127.0.0.1:27017] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:64}] to 127.0.0.1:27017
+583 [cluster-ClusterId{value='5b68d31ae7424d2562fb4981', description='null'}-127.0.0.1:27017] INFO org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1071285}
+606 [main] INFO org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:65}] to 127.0.0.1:27017
+1611 [main] INFO org.eclipse.milo.opcua.sdk.client.OpcUaClient - Eclipse Milo OPC UA Stack version: dev
+1611 [main] INFO org.eclipse.milo.opcua.sdk.client.OpcUaClient - Eclipse Milo OPC UA Client SDK version: dev
+1788 [NonceUtilSecureRandom] INFO org.eclipse.milo.opcua.stack.core.util.NonceUtil - SecureRandom seeded in 0ms.
+1500
+com.youbim.app.OPCClient.OPCClient@22de3ee5
+20882 [ua-shared-pool-3] WARN org.eclipse.milo.opcua.stack.core.util.ExecutionQueue - Uncaught Throwable during execution.
+org.java_websocket.exceptions.WebsocketNotConnectedException
+	at org.java_websocket.WebSocketImpl.send(WebSocketImpl.java:608)
+	at org.java_websocket.WebSocketImpl.send(WebSocketImpl.java:585)
+	at com.youbim.app.WebSocketServer.Client.send(Client.java:22)
+	at com.youbim.app.OPCClient.Nodes.Node.lambda$new$0(Node.java:59)
+	at com.youbim.app.OPCClient.Nodes.Node.lambda$null$1(Node.java:73)
+	at org.eclipse.milo.opcua.sdk.client.subscriptions.OpcUaMonitoredItem.lambda$setValueConsumer$1(OpcUaMonitoredItem.java:138)
+	at org.eclipse.milo.opcua.sdk.client.subscriptions.OpcUaMonitoredItem.onValueArrived(OpcUaMonitoredItem.java:191)
+	at org.eclipse.milo.opcua.sdk.client.subscriptions.OpcUaSubscriptionManager.lambda$null$37(OpcUaSubscriptionManager.java:680)
+	at org.eclipse.milo.opcua.stack.core.util.ExecutionQueue$PollAndExecute.run(ExecutionQueue.java:107)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
