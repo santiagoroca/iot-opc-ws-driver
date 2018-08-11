@@ -1,0 +1,41 @@
+<html>
+
+    <head>
+
+        
+
+    </head>
+
+    <body>
+
+    </body>
+
+    <script>
+
+        /*
+        *
+        */
+        function OPCWSClient (building_id, filters, callback) {
+
+            /*
+            *
+            */
+            this.connection = new WebSocket(`ws://localhost:8081/${building_id}?id=0`);
+
+            /*
+            *
+            */
+            this.connection.onmessage = message => callback(JSON.parse(message.data));
+
+        }
+
+        /*
+        *
+        */
+        new OPCWSClient(1500, {}, data => {
+            document.body.innerHTML = data.data_value.value.value;
+        });
+
+    </script>
+
+</html>
