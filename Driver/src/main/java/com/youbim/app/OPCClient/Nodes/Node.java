@@ -2,6 +2,7 @@ package com.youbim.app.OPCClient.Nodes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.concurrent.ExecutionException;
 import java.util.function.BiConsumer;
 
@@ -78,14 +79,16 @@ public class Node {
 
             // The actual consumer
             Consumer<DataValue> consumer = value -> {
-                for (Client wsClient : clients) {  
+
+                // Create iterator to loop through each client.
+                for(Iterator<Client> clientsIterator = clients.iterator(); clientsIterator.hasNext();){
+                    Client wsClient = clientsIterator.next();
 
                     try {
                         wsClient.send(getEnvelope(node, value));
                     } catch (WebsocketNotConnectedException exception) {
-                        clients.remove(wsClient);
-                    }
-                    
+                        clientsIterator.remove();
+                    }   
                 }
             };
 
@@ -99,7 +102,7 @@ public class Node {
             
             // setting the consumer after the subscription creation
             BiConsumer<UaMonitoredItem, Integer> onItemCreated = (monitoredItem, id) -> monitoredItem.setValueConsumer((a, b) -> {
-                consumer.accept(b);                
+                consumer.accept(b);
             });
 
             // creating the subscription

@@ -31,7 +31,7 @@ public class Server extends WebSocketServer {
 
 	@Override
 	public void onClose(WebSocket connection, int code, String reason, boolean remote) {
-		
+		System.out.println("Closed Connection");
 	}
 
 	@Override

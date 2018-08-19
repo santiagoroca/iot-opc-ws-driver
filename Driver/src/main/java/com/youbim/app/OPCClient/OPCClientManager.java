@@ -16,7 +16,6 @@ public class OPCClientManager {
     */
     private static OPCClientManager singleton;
 
-
     /*
     *
     */
