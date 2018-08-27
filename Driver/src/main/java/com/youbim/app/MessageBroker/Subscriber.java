@@ -9,6 +9,9 @@ import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
 
@@ -23,7 +26,7 @@ import com.rabbitmq.client.Connection;;
 
 public class Subscriber {
 
-    public static void subscribe () throws java.io.IOException, java.lang.InterruptedException {
+    public static synchronized void subscribe () throws java.io.IOException, java.lang.InterruptedException {
 
       try {
 
@@ -35,7 +38,9 @@ public class Subscriber {
         morphia.mapPackage("com.youbim.app.ORM");
 
         // create the Datastore connecting to the database running on the default port on the local host
-        final Datastore datastore = morphia.createDatastore(new MongoClient(), "opc-server");
+        final Datastore datastore = morphia.createDatastore(new MongoClient(
+          "54.202.244.55", 27017
+        ), "opc-server");
 
         // tell Morphia where to find your classes
         // can be called multiple times with different packages or classes
@@ -48,7 +53,11 @@ public class Subscriber {
         ConnectionFactory factory = new ConnectionFactory();
 
         //
-        factory.setHost("localhost");
+        factory.setUsername("remote");
+        factory.setPassword("remote");
+        factory.setVirtualHost("/opc");
+        factory.setHost("172.31.25.143");
+        factory.setPort(5672);
 
         //
         Connection connection = factory.newConnection();
@@ -85,7 +94,6 @@ public class Subscriber {
               // If the client already exists, update the connection.
               System.out.println(message.getBuildingId());
               if (OPCClientManager.get().exists(message.getBuildingId())) {
-                System.out.println("Does");
                 OPCClientManager.get().get(message.getBuildingId()).deploy(configurations.get(0));
               }
 

@@ -1,6 +1,6 @@
-/home/santi/Documents/OPC/OPC-WS-Configurer/src/main/java/com/youbim/app/MessageBroker/Publisher.java
-/home/santi/Documents/OPC/OPC-WS-Configurer/src/main/java/com/youbim/app/MessageBroker/Message.java
-/home/santi/Documents/OPC/OPC-WS-Configurer/src/main/java/com/youbim/app/Controller/ConfigurationController.java
-/home/santi/Documents/OPC/OPC-WS-Configurer/src/main/java/com/youbim/app/ORM/Node.java
-/home/santi/Documents/OPC/OPC-WS-Configurer/src/main/java/com/youbim/app/Application.java
-/home/santi/Documents/OPC/OPC-WS-Configurer/src/main/java/com/youbim/app/ORM/Configurations.java
+/home/santi/Documents/OPC/Configurer/src/main/java/com/youbim/app/Controller/ConfigurationController.java
+/home/santi/Documents/OPC/Configurer/src/main/java/com/youbim/app/ORM/Configurations.java
+/home/santi/Documents/OPC/Configurer/src/main/java/com/youbim/app/MessageBroker/Message.java
+/home/santi/Documents/OPC/Configurer/src/main/java/com/youbim/app/MessageBroker/Publisher.java
+/home/santi/Documents/OPC/Configurer/src/main/java/com/youbim/app/ORM/Node.java
+/home/santi/Documents/OPC/Configurer/src/main/java/com/youbim/app/Application.java

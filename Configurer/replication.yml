@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: opc-configurer
+spec:
+  replicas: 3
+  selector:
+    app: opc-configurer
+  template:
+    metadata:
+      name: opc-configurer
+      labels:
+        app: opc-configurer
+    spec:
+      containers:
+      - name: opc-configurer
+        image: opc-configurer
+        ports:
+        - containerPort: 8080

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.AppTest" time="0.009" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.AppTest" time="0.007" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -17,7 +17,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home/santi/Documents/OPC/Driver/target/surefire/surefirebooter7426693265758319867.jar /home/santi/Documents/OPC/Driver/target/surefire 2018-08-18T21-50-12_199-jvmRun1 surefire6780777300999829518tmp surefire_0613542877131572543tmp"/>
+    <property name="sun.java.command" value="/home/santi/Documents/OPC/Driver/target/surefire/surefirebooter8401697263860793989.jar /home/santi/Documents/OPC/Driver/target/surefire 2018-08-27T13-03-13_455-jvmRun1 surefire3650125666653899859tmp surefire_03107535817515030488tmp"/>
     <property name="surefire.test.class.path" value="/home/santi/Documents/OPC/Driver/target/test-classes:/home/santi/Documents/OPC/Driver/target/classes:/home/santi/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/santi/.m2/repository/org/eclipse/milo/sdk-server/0.2.1/sdk-server-0.2.1.jar:/home/santi/.m2/repository/org/eclipse/milo/stack-core/0.2.1/stack-core-0.2.1.jar:/home/santi/.m2/repository/com/google/guava/guava/19.0/guava-19.0.jar:/home/santi/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar:/home/santi/.m2/repository/io/netty/netty-codec/4.1.25.Final/netty-codec-4.1.25.Final.jar:/home/santi/.m2/repository/io/netty/netty-transport/4.1.25.Final/netty-transport-4.1.25.Final.jar:/home/santi/.m2/repository/io/netty/netty-resolver/4.1.25.Final/netty-resolver-4.1.25.Final.jar:/home/santi/.m2/repository/io/netty/netty-handler/4.1.25.Final/netty-handler-4.1.25.Final.jar:/home/santi/.m2/repository/io/netty/netty-buffer/4.1.25.Final/netty-buffer-4.1.25.Final.jar:/home/santi/.m2/repository/io/netty/netty-common/4.1.25.Final/netty-common-4.1.25.Final.jar:/home/santi/.m2/repository/org/jooq/jool/0.9.10/jool-0.9.10.jar:/home/santi/.m2/repository/org/eclipse/milo/sdk-core/0.2.1/sdk-core-0.2.1.jar:/home/santi/.m2/repository/io/dropwizard/metrics/metrics-core/3.2.6/metrics-core-3.2.6.jar:/home/santi/.m2/repository/org/eclipse/milo/sdk-client/0.2.1/sdk-client-0.2.1.jar:/home/santi/.m2/repository/org/eclipse/milo/bsd-parser-core/0.2.1/bsd-parser-core-0.2.1.jar:/home/santi/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar:/home/santi/.m2/repository/com/codepoetics/protonpack/1.8/protonpack-1.8.jar:/home/santi/.m2/repository/org/eclipse/milo/stack-client/0.2.1/stack-client-0.2.1.jar:/home/santi/.m2/repository/org/eclipse/milo/stack-server/0.2.1/stack-server-0.2.1.jar:/home/santi/.m2/repository/org/java-websocket/Java-WebSocket/1.3.8/Java-WebSocket-1.3.8.jar:/home/santi/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/home/santi/.m2/repository/org/slf4j/slf4j-simple/1.6.4/slf4j-simple-1.6.4.jar:/home/santi/.m2/repository/org/mongodb/morphia/morphia/1.3.1/morphia-1.3.1.jar:/home/santi/.m2/repository/org/mongodb/mongo-java-driver/3.6.4/mongo-java-driver-3.6.4.jar:/home/santi/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar:/home/santi/.m2/repository/com/thoughtworks/proxytoys/proxytoys/1.0/proxytoys-1.0.jar:/home/santi/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar:/home/santi/.m2/repository/com/rabbitmq/amqp-client/5.3.0/amqp-client-5.3.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/santi"/>
@@ -30,13 +30,13 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/santi/Documents/OPC/Driver/target/surefire/surefirebooter7426693265758319867.jar"/>
+    <property name="surefire.real.class.path" value="/home/santi/Documents/OPC/Driver/target/surefire/surefirebooter8401697263860793989.jar"/>
     <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_181-8u181-b13-0ubuntu0.18.04.1-b13"/>
     <property name="user.name" value="santi"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="4.15.0-32-generic"/>
+    <property name="os.version" value="4.15.0-33-generic"/>
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
@@ -58,5 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testApp" classname="com.mycompany.app.AppTest" time="0"/>
+  <testcase name="testApp" classname="com.mycompany.app.AppTest" time="0.002"/>
 </testsuite>

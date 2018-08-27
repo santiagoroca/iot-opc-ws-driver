@@ -1,39 +1,24 @@
 <html>
 
     <head>
-
-        
-
     </head>
 
     <body>
-
     </body>
 
+    <script src="./opc-client.js"></script>
     <script>
-
         /*
         *
         */
-        function OPCWSClient (building_id, filters, callback) {
+        const clientConnection = new OPCWSClient(1500, 'ws://54.71.122.57:8081', 'http://54.202.244.55:8080');
+        clientConnection.onNodeListAvailable(nodeList => {
 
-            /*
-            *
-            */
-            this.connection = new WebSocket(`ws://localhost:8081/${building_id}?id=0`);
+            for (let node of nodeList) {
+                console.log(node);
+                node.subscribe(data => console.log(data));
+            }
 
-            /*
-            *
-            */
-            this.connection.onmessage = message => callback(JSON.parse(message.data));
-
-        }
-
-        /*
-        *
-        */
-        new OPCWSClient(1500, {}, data => {
-            document.body.innerHTML = data.data_value.value.value;
         });
 
     </script>

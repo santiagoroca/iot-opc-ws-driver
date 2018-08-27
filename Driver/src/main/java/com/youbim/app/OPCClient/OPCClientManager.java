@@ -48,7 +48,9 @@ public class OPCClientManager {
         morphia.mapPackage("com.youbim.app.ORM");
 
         // create the Datastore connecting to the database running on the default port on the local host
-        final Datastore datastore = morphia.createDatastore(new MongoClient(), "opc-server");
+        final Datastore datastore = morphia.createDatastore(new MongoClient(
+            "54.202.244.55", 27017
+        ), "opc-server");
 
 		// tell Morphia where to find your classes
 		// can be called multiple times with different packages or classes

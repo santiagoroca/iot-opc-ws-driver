@@ -1,7 +1,6 @@
 package com.youbim.app.WebSocketServer;
 
 import java.net.InetSocketAddress;
-import java.net.MalformedURLException;
 
 import com.google.gson.Gson;
 import com.youbim.app.OPCClient.OPCClientManager;

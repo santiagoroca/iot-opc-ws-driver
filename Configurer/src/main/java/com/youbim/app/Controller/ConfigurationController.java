@@ -11,11 +11,13 @@ import com.youbim.app.ORM.Configurations;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @RestController
 public class ConfigurationController {
@@ -46,11 +48,13 @@ public class ConfigurationController {
 
     }
 
+    @CrossOrigin
     @RequestMapping("/configuration/{building_id}")
     public Configurations get(@PathVariable(value="building_id") int building_id) {
         return datastore.find(Configurations.class).filter("building_id", building_id).asList().get(0);
     }
 
+    @CrossOrigin
     @RequestMapping(value="/configuration/{building_id}", method=RequestMethod.POST)
     public ResponseEntity<Configurations> post(
         @PathVariable(value="building_id") int building_id,
